@@ -52,7 +52,6 @@ func handleRoot(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleHello(w http.ResponseWriter, r *http.Request) {
-
 	switch r.Method {
 	case http.MethodGet:
 		log.Println("Request received on hello")
@@ -61,5 +60,4 @@ func handleHello(w http.ResponseWriter, r *http.Request) {
 		log.Println("Request received on hello")
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 	}
-
 }
